@@ -37,7 +37,7 @@ export default class{
 
         Emitter.emit(packet.data[0], packet.data[1]);
 
-        if(this.store) this.passToStoreWithKey(key.toUpperCase()+'_SOCKET_'+packet.data[0],  [ ...packet.data.slice(1)], key)
+        if(this.store) this.passToStoreWithKey(key.toUpperCase()+'_SOCKET_'+packet.data[0], ...packet.data.slice(1), key)
       };
 
       let _this = this;
@@ -77,7 +77,7 @@ export default class{
 
             Emitter.emit(packet.data[0], packet.data[1]);
 
-            if(this.store) this.passToStore('SOCKET_'+packet.data[0],  [ ...packet.data.slice(1)])
+            if(this.store) this.passToStore('SOCKET_'+packet.data[0],  ...packet.data.slice(1))
         };
 
         let _this = this;

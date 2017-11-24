@@ -6855,7 +6855,7 @@ module.exports = function(module) {
 
         __WEBPACK_IMPORTED_MODULE_0__Emitter__["a" /* default */].emit(packet.data[0], packet.data[1]);
 
-        if(this.store) this.passToStoreWithKey(key.toUpperCase()+'_SOCKET_'+packet.data[0],  [ ...packet.data.slice(1)], key)
+        if(this.store) this.passToStoreWithKey(key.toUpperCase()+'_SOCKET_'+packet.data[0], ...packet.data.slice(1), key)
       };
 
       let _this = this;
@@ -6895,7 +6895,7 @@ module.exports = function(module) {
 
             __WEBPACK_IMPORTED_MODULE_0__Emitter__["a" /* default */].emit(packet.data[0], packet.data[1]);
 
-            if(this.store) this.passToStore('SOCKET_'+packet.data[0],  [ ...packet.data.slice(1)])
+            if(this.store) this.passToStore('SOCKET_'+packet.data[0],  ...packet.data.slice(1))
         };
 
         let _this = this;
